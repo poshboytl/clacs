@@ -9,7 +9,7 @@ class Klacs < Sinatra::Base
   end
 
   def self.deliver(message)
-    # send to pusher
+    #
   end
 
 end

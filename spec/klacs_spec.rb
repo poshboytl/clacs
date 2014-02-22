@@ -20,7 +20,6 @@ describe Klacs do
   describe "POST /messages" do
     let(:message) { 'hola!' }
 
-
     context "with message params" do
       it "should be success and call deliver" do
         Klacs.should_receive(:deliver).with(message)
