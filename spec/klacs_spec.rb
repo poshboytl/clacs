@@ -24,7 +24,7 @@ describe Klacs do
       it "should be success and call deliver" do
         Klacs.should_receive(:deliver).with(message)
         post '/messages', message: message
-        last_response.status.should == 201
+        last_response.status.should == 204
       end
     end
 
@@ -32,7 +32,7 @@ describe Klacs do
       it "should be success but without calling deliver" do
         Klacs.should_not_receive(:deliver)
         post '/messages'
-        last_response.status.should == 201
+        last_response.status.should == 204
       end
     end
   end
